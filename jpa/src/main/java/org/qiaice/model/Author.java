@@ -2,17 +2,16 @@ package org.qiaice.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.List;
+
 
 @Data
 @Entity // 以当前实体类为模板，生成数据表
 @Table(name = "author") // 修改表的一些设置，比如表名
-public class Author {
-
-    @Id // 指定主键
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // 指定主键生成策略
-    private Integer id;
+@EqualsAndHashCode(callSuper = true)
+public class Author extends BaseModel {
 
     @Column(name = "first_name", length = 16) // 修改列的一些设置，比如列名
     private String firstName;
