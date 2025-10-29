@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
-
 @Data
 @Entity // 以当前实体类为模板，生成数据表
 @Table(name = "author") // 修改表的一些设置，比如表名
